@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: firefoxpod
+  labels:
+    app: firefox
+    env: dev
+    
+spec:
+  containers:
+  - name: firefox-container
+    image: jlesage/firefox:latest
+    ports:
+     - containerPort: 5800
